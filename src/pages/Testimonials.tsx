@@ -2,14 +2,14 @@ import { Star, CheckCircle2, Quote, ArrowRight } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
 const allTestimonials = [
-  { name: 'Ranjan Kumar', role: 'Mithila Catering', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
-  { name: 'Vikash Kumar', role: 'Kaushalayan Consulting', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
-  { name: 'Rahul Kaushik', role: 'Kaushik Caterers', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
-  { name: 'Rahul Dogra', role: 'Lalaji Caterers', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' },
-  { name: 'Aakash Digital', role: 'Tech SaaS', text: 'Walt Designs helped us scale our user base by 300% in just 6 months. Highly recommended!' },
-  { name: 'Royal Interiors', role: 'Real Estate', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' },
-  { name: 'Green Valley', role: 'Agriculture', text: 'Professional team with a deep understanding of market dynamics. Their growth strategies are game-changers.' },
-  { name: 'Global Logistics', role: 'Shipping', text: 'Efficient, creative, and reliable. They are our go-to partners for all things design and marketing.' },
+  { name: 'RANJAN KUMAR', role: 'MITHILA CATERING', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
+  { name: 'VIKASH KUMAR', role: 'KAUSHALAYAN CONSULTING', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
+  { name: 'RAHUL KAUSHIK', role: 'KAUSHIK CATERERS', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
+  { name: 'RAHUL DOGRA', role: 'LALAJI CATERERS', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' },
+  { name: 'AAKASH DIGITAL', role: 'TECH SAAS', text: 'Walt Designs helped us scale our user base by 300% in just 6 months. Highly recommended!' },
+  { name: 'ROYAL INTERIORS', role: 'REAL ESTATE', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' },
+  { name: 'GREEN VALLEY', role: 'AGRICULTURE', text: 'Professional team with a deep understanding of market dynamics. Their growth strategies are game-changers.' },
+  { name: 'GLOBAL LOGISTICS', role: 'SHIPPING', text: 'Efficient, creative, and reliable. They are our go-to partners for all things design and marketing.' },
 ];
 
 export default function Testimonials() {
@@ -48,7 +48,7 @@ export default function Testimonials() {
           {/* Hidden/Exclusive Feel */}
           <div className="mt-20 p-12 bg-dark-teal rounded-[3rem] text-center text-white">
              <h2 className="text-3xl font-bold mb-6 italic uppercase tracking-tight">Ready to be our next success story?</h2>
-             <a href="/contact.html" className="inline-flex items-center space-x-2 text-emerald-walt font-bold hover:text-royalgold transition-colors text-lg">
+             <a href="/contact" className="inline-flex items-center space-x-2 text-emerald-walt font-bold hover:text-royalgold transition-colors text-lg">
                 <span>Start Your Brand Evolution</span>
                 <ArrowRight className="h-5 w-5" />
              </a>

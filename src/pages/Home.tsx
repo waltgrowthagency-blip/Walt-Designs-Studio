@@ -207,10 +207,10 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4 lg:gap-8">
               {[
-                { name: 'Ranjan Kumar', role: 'Mithila Catering', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
-                { name: 'Vikash Kumar', role: 'Kaushalayan Consulting', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
-                { name: 'Rahul Kaushik', role: 'Kaushik Caterers', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
-                { name: 'Rahul Dogra', role: 'Lalaji Caterers', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' }
+                { name: 'RANJAN KUMAR', role: 'MITHILA CATERING', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
+                { name: 'VIKASH KUMAR', role: 'KAUSHALAYAN CONSULTING', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
+                { name: 'RAHUL KAUSHIK', role: 'KAUSHIK CATERERS', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
+                { name: 'RAHUL DOGRA', role: 'LALAJI CATERERS', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' }
               ].map((t, idx) => (
                 <div key={idx} className="p-6 bg-white rounded-2xl border-4 border-brand-magenta/20 relative group hover:border-brand-magenta hover:shadow-2xl transition-all h-full flex flex-col justify-between overflow-hidden">
                   <div className="absolute inset-0 bg-brand-magenta/5 animate-pulse opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />

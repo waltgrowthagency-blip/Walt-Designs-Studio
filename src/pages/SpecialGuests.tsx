@@ -53,7 +53,7 @@ export default function SpecialGuests() {
           whileHover={{ scale: 1.1, rotate: 10 }}
           whileTap={{ scale: 0.9 }}
           onClick={triggerConfetti}
-          className="fixed bottom-10 right-10 z-[100] w-20 h-20 bg-yellow-400 text-red-600 rounded-full shadow-[0_20px_50px_rgba(255,50,50,0.4)] flex items-center justify-center border-4 border-white animate-bounce-slow"
+          className="fixed bottom-10 left-10 z-[100] w-20 h-20 bg-yellow-400 text-red-600 rounded-full shadow-[0_20px_50px_rgba(255,50,50,0.4)] flex items-center justify-center border-4 border-white animate-bounce-slow"
         >
           <PartyPopper className="h-10 w-10" />
         </motion.button>
