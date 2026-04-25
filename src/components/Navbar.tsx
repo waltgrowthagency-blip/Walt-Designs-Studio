@@ -52,8 +52,8 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.path}
-                className={`relative text-[10px] font-bold uppercase tracking-widest transition-all hover:text-brand-peach ${
-                  window.location.pathname === link.path ? 'text-brand-peach border-b-2 border-brand-peach pb-1' : 'text-white'
+                className={`relative text-[10px] font-normal uppercase tracking-widest transition-all hover:text-brand-peach ${
+                  window.location.pathname === link.path ? 'text-brand-peach border-b-2 border-brand-peach pb-1 font-bold' : 'text-white'
                 }`}
               >
                 {link.name}
@@ -101,8 +101,8 @@ export default function Navbar() {
                   animate={{ x: 0, opacity: 1 }}
                   key={link.name}
                   href={link.path}
-                  className={`text-2xl font-bold uppercase tracking-tighter flex items-center justify-between ${
-                    window.location.pathname === link.path ? 'text-brand-peach' : 'text-white'
+                  className={`text-2xl font-normal uppercase tracking-tighter flex items-center justify-between ${
+                    window.location.pathname === link.path ? 'text-brand-peach font-bold' : 'text-white'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >
@@ -114,9 +114,6 @@ export default function Navbar() {
                   )}
                 </motion.a>
               ))}
-              <a href="/contact" className="block w-full bg-white text-brand-navy-violet text-center py-5 rounded-2xl font-bold uppercase tracking-widest text-sm shadow-xl">
-                Start Now
-              </a>
             </div>
           </motion.div>
         )}

@@ -98,7 +98,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-xs text-white/80 font-medium">
-          &copy; 2026 Walt Designs & Studio (With Growth Agency) &bull; Est. 2026
+          &copy; 2026 Walt Designs & Studio (With Growth Agency) & bull; Est. 2026
         </div>
       </div>
     </footer>

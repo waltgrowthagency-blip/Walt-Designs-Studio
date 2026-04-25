@@ -3,7 +3,6 @@ import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import ChatbotButton from './components/ChatbotButton';
-import AIPlanner from './components/AIPlanner';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import About from './pages/About';
@@ -35,7 +34,6 @@ export default function App() {
         </main>
         <Footer />
         <ChatbotButton />
-        <AIPlanner />
       </div>
     </Router>
   );

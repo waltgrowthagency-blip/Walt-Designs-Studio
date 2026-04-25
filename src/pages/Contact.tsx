@@ -4,7 +4,7 @@ import PageWrapper from '../components/PageWrapper';
 export default function Contact() {
   return (
     <PageWrapper>
-      <section className="py-20 lg:py-32 bg-brand-purple">
+      <section className="py-20 lg:py-32 bg-red-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-20">
             {/* Info Side */}

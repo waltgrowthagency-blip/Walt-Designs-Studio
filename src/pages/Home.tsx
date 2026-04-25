@@ -1,6 +1,19 @@
 import { ArrowRight, Star, CheckCircle2, Layout, Zap, TrendingUp, Globe } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
-import { motion } from 'motion/react';
+import { motion, useMotionValue, useTransform, animate } from 'motion/react';
+import { useEffect } from 'react';
+
+function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
+  const count = useMotionValue(0);
+  const rounded = useTransform(count, (latest) => Math.round(latest));
+
+  useEffect(() => {
+    const controls = animate(count, value, { duration: 2, ease: "easeOut" });
+    return () => controls.stop();
+  }, [count, value]);
+
+  return <motion.span>{rounded}</motion.span>;
+}
 
 export default function Home() {
   return (
@@ -101,17 +114,19 @@ export default function Home() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
               {[
-                { icon: Layout, label: 'Projects Completed', value: '12+' },
-                { icon: Star, label: 'Happy Clients', value: '150+' },
-                { icon: Globe, label: 'Available over world', value: 'Global' },
-                { icon: Zap, label: 'Fast Delivery & On-Time', value: '100%' },
+                { icon: Layout, label: 'Projects Completed', value: 12, suffix: '+' },
+                { icon: Star, label: 'Happy Clients', value: 150, suffix: '+' },
+                { icon: Globe, label: 'Available over world', value: 100, suffix: '%', isSpecial: 'Global' },
+                { icon: Zap, label: 'Fast Delivery & On-Time', value: 100, suffix: '%' },
               ].map((stat, idx) => (
                 <div key={idx} className="p-8 md:p-12 bg-white/10 backdrop-blur-md rounded-[2rem] border border-white/20 flex flex-col items-center justify-center text-center space-y-4 hover:bg-white group transition-all duration-300">
                   <div className="p-4 bg-white/20 rounded-2xl group-hover:bg-brand-purple/10 group-hover:text-brand-purple text-white transition-colors">
                     <stat.icon className="h-8 w-8" />
                   </div>
                   <div>
-                    <div className="text-3xl md:text-5xl font-bold text-white group-hover:text-brand-purple mb-1">{stat.value}</div>
+                    <div className="text-3xl md:text-5xl font-bold text-white group-hover:text-brand-purple mb-1">
+                      {stat.isSpecial === 'Global' ? 'Global' : <><Counter value={stat.value} />{stat.suffix}</>}
+                    </div>
                     <div className="text-[10px] md:text-xs font-bold text-white/70 group-hover:text-brand-purple/60 uppercase tracking-widest leading-tight">{stat.label}</div>
                   </div>
                 </div>
@@ -164,35 +179,6 @@ export default function Home() {
         </div>
       </section>
     </div>
-
-    {/* Portfolio Showcase */}
-    <section className="py-16 bg-gray-900 text-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
-            <div className="space-y-4 text-center md:text-left">
-              <h2 className="text-4xl font-bold tracking-tight">Featured Masterpieces</h2>
-              <p className="text-gray-400 max-w-xl">Take a look at some of our recent creative endeavors and success stories.</p>
-            </div>
-            <a href="/services" className="px-6 py-3 border border-gray-700 hover:border-teal-500 rounded-full text-sm font-bold transition-all">View All Work</a>
-          </div>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[
-              "https://images.unsplash.com/photo-1547658719-da2b51169166?auto=format&fit=crop&q=80&w=800",
-              "https://images.unsplash.com/photo-1551218808-94e220e084d2?auto=format&fit=crop&q=80&w=800",
-              "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-            ].map((img, idx) => (
-              <div key={idx} className="group relative rounded-3xl overflow-hidden aspect-[4/5]">
-                <img src={img} alt="Portfolio Item" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900 via-transparent to-transparent opacity-60" />
-                <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform">
-                  <div className="text-teal-400 text-xs font-bold uppercase tracking-widest mb-2">Graphic Design / UI</div>
-                  <h4 className="text-xl font-bold mb-4 uppercase tracking-tighter">Elite Project 0{idx + 1}</h4>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials */}
       <section className="py-16 bg-brand-pink-light">
