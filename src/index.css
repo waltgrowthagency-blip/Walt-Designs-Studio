@@ -16,9 +16,9 @@
   --color-brand-pink-light: #ffebf3;
 }
 
-@layer base {
-  body {
-    @apply font-sans text-gray-900 antialiased overflow-x-hidden;
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
   }
 }
 

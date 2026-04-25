@@ -7,7 +7,7 @@ const navLinks = [
   { name: 'Services', path: '/services' },
   { name: 'About Us', path: '/about' },
   { name: 'Walt Growth Agency', path: '/growth', trending: true },
-  { name: 'Special Guests', path: '/special-guests' },
+  { name: 'Lime Green Specials💚', path: '/special-guests', highlight: true },
   { name: 'Contact Us', path: '/contact' },
 ];
 
@@ -53,8 +53,12 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.path}
-                className={`relative text-[10px] font-normal uppercase tracking-widest transition-all hover:text-brand-peach ${
-                  window.location.pathname === link.path ? 'text-brand-peach border-b-2 border-brand-peach pb-1 font-bold' : 'text-white'
+                className={`relative text-[10px] uppercase tracking-widest transition-all hover:text-brand-peach ${
+                  window.location.pathname === link.path 
+                    ? 'text-brand-peach border-b-2 border-brand-peach pb-1 font-bold' 
+                    : link.highlight
+                      ? 'text-brand-magenta font-black bg-brand-magenta/10 px-3 py-1 rounded-full animate-bounce shadow-sm'
+                      : 'text-white font-normal'
                 }`}
               >
                 {link.name}
@@ -103,7 +107,11 @@ export default function Navbar() {
                   key={link.name}
                   href={link.path}
                   className={`text-2xl font-normal uppercase tracking-tighter flex items-center justify-between ${
-                    window.location.pathname === link.path ? 'text-brand-peach font-bold' : 'text-white'
+                    window.location.pathname === link.path 
+                      ? 'text-brand-peach font-bold' 
+                      : link.highlight 
+                        ? 'text-brand-peach bg-brand-peach/10 px-4 py-2 rounded-xl animate-pulse font-black' 
+                        : 'text-white'
                   }`}
                   onClick={() => setIsOpen(false)}
                 >

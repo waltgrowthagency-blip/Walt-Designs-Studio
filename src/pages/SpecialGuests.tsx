@@ -4,13 +4,12 @@ import { Cake, Gift, Heart, Star, Sparkles, Send, PartyPopper, Coffee, Pizza, Co
 import PageWrapper from '../components/PageWrapper';
 
 export default function SpecialGuests() {
-  const [showContent, setShowContent] = useState(false);
   const [isOpening, setIsOpening] = useState(true);
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpening(false);
-    }, 2000);
+    }, 2500);
     return () => clearTimeout(timer);
   }, []);
 
@@ -18,7 +17,21 @@ export default function SpecialGuests() {
 
   return (
     <PageWrapper>
-      <div className="relative min-h-screen overflow-hidden bg-gradient-to-br from-brand-magenta via-brand-purple to-brand-navy-violet">
+      <style>{`
+        @keyframes rgbLime {
+          0% { background-color: #ff0000; }
+          25% { background-color: #00ff00; }
+          50% { background-color: #0000ff; }
+          75% { background-color: #32cd32; }
+          100% { background-color: #ff0000; }
+        }
+        .animated-bg {
+          animation: rgbLime 10s infinite;
+          transition: background-color 2s ease-in-out;
+        }
+      `}</style>
+      <div className="relative min-h-screen overflow-hidden animated-bg">
+        <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
         
         {/* Curtain Opening Animation */}
         <AnimatePresence>
@@ -27,18 +40,26 @@ export default function SpecialGuests() {
               <motion.div 
                 initial={{ x: 0 }}
                 animate={{ x: '-100%' }}
-                transition={{ duration: 1.5, ease: [0.77, 0, 0.175, 1], delay: 0.5 }}
-                className="fixed inset-y-0 left-0 w-1/2 bg-red-800 z-[200] border-r-4 border-yellow-500 shadow-2xl flex items-center justify-end"
+                transition={{ duration: 2, ease: [0.77, 0, 0.175, 1], delay: 0.5 }}
+                className="fixed inset-y-0 left-0 w-1/2 bg-gradient-to-r from-red-600 via-yellow-500 to-green-600 z-[200] border-r-[12px] border-double border-yellow-300 shadow-[20px_0_50px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center pt-20"
               >
-                <div className="h-full w-4 bg-red-900 opacity-50 mr-4" />
+                <div className="rotate-[-90deg] whitespace-nowrap">
+                  <h1 className="text-6xl font-black text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] uppercase tracking-tighter">
+                    WELCOME TO REYANSH'S PARTY
+                  </h1>
+                </div>
               </motion.div>
               <motion.div 
                 initial={{ x: 0 }}
                 animate={{ x: '100%' }}
-                transition={{ duration: 1.5, ease: [0.77, 0, 0.175, 1], delay: 0.5 }}
-                className="fixed inset-y-0 right-0 w-1/2 bg-red-800 z-[200] border-l-4 border-yellow-500 shadow-2xl flex items-center justify-start"
+                transition={{ duration: 2, ease: [0.77, 0, 0.175, 1], delay: 0.5 }}
+                className="fixed inset-y-0 right-0 w-1/2 bg-gradient-to-l from-blue-600 via-indigo-500 to-purple-600 z-[200] border-l-[12px] border-double border-yellow-300 shadow-[-20px_0_50px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center pt-20"
               >
-                <div className="h-full w-4 bg-red-900 opacity-50 ml-4" />
+                <div className="rotate-[90deg] whitespace-nowrap">
+                  <h1 className="text-6xl font-black text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] uppercase tracking-tighter">
+                    LIME GREEN SPECIALS
+                  </h1>
+                </div>
               </motion.div>
             </>
           )}
@@ -75,37 +96,86 @@ export default function SpecialGuests() {
           <div className="max-w-4xl mx-auto">
             {/* Header / Intro */}
             <motion.div 
-              initial={{ opacity: 0, scale: 0.5 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ delay: 2, duration: 0.8 }}
-              className="text-center mb-16"
+              initial={{ opacity: 0, scale: 0.5, rotateY: 90 }}
+              animate={{ opacity: 1, scale: 1, rotateY: 0 }}
+              transition={{ delay: 2.2, duration: 1, type: "spring" }}
+              className="text-center mb-16 perspective-1000"
             >
               <motion.div 
                 animate={{ 
-                  backgroundColor: ['#d946ef', '#6b21a8', '#ffcc99', '#d946ef'],
-                  scale: [1, 1.1, 1]
+                  backgroundColor: ['#ff0000', '#00ff00', '#0000ff', '#32cd32', '#ff0000'],
+                  scale: [1, 1.1, 1],
+                  rotateZ: [0, 2, -2, 0]
                 }}
-                transition={{ duration: 4, repeat: Infinity }}
-                className="inline-block px-8 py-4 rounded-full shadow-2xl mb-8 border-4 border-white"
+                transition={{ duration: 5, repeat: Infinity }}
+                className="inline-block px-10 py-6 rounded-[3rem] shadow-[0_20px_80px_rgba(255,255,255,0.5)] mb-12 border-8 border-white transform-gpu hover:rotate-2 transition-transform cursor-default"
               >
-                <h1 className="text-3xl md:text-5xl font-black text-white uppercase tracking-tighter">
-                  🌟 Lime Special Guests 🌟
+                <h1 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tighter drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]">
+                  💚 Lime Green Specials 💚
                 </h1>
               </motion.div>
-              
-              <div className="relative inline-block">
-                <motion.div 
-                  animate={{ rotate: [0, 5, -5, 0] }}
-                  transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute -top-12 -right-12 z-10 bg-yellow-400 text-brand-navy-violet p-4 rounded-full font-bold shadow-xl border-4 border-white"
+                       <div className="relative inline-block mt-4">
+                {/* 3D Popping Elements */}
+                <motion.div
+                  animate={{ 
+                    scale: [1, 1.2, 1],
+                    rotate: [0, 10, -10, 0],
+                  }}
+                  transition={{ duration: 3, repeat: Infinity }}
+                  className="absolute -top-20 -left-20 z-40 bg-gradient-to-tr from-pink-500 to-yellow-400 p-6 rounded-full shadow-[0_10px_40px_rgba(255,100,255,0.6)] border-4 border-white text-3xl hidden md:block"
                 >
-                  HAPPY BIRTHDAY!
+                  🎉
                 </motion.div>
-                <img 
-                  src="https://i.ibb.co/G4rrD3Q4/IMG-20260419-WA0112.jpg" 
-                  alt="Reyansh Singh" 
-                  className="w-64 h-64 md:w-80 md:h-80 object-cover rounded-[3rem] border-8 border-white shadow-[0_0_50px_rgba(255,255,255,0.4)] mx-auto relative z-0"
-                />
+
+                {/* Cartoon Guests - Shinchan & Doraemon */}
+                <motion.div 
+                  animate={{ 
+                    y: [0, -30, 0], 
+                    rotate: [0, 5, -5, 0],
+                    scale: [1, 1.1, 1]
+                  }}
+                  transition={{ duration: 3.5, repeat: Infinity }}
+                  className="absolute -left-40 top-10 z-20 hidden lg:block"
+                >
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-blue-400 blur-2xl opacity-30 group-hover:opacity-60 transition-opacity" />
+                    <img src="https://img.icons8.com/color/180/doraemon.png" alt="Doraemon" className="w-40 h-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.4)] relative" />
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  animate={{ 
+                    y: [0, -25, 0], 
+                    rotate: [0, -5, 5, 0],
+                    scale: [1, 1.05, 1]
+                  }}
+                  transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
+                  className="absolute -right-40 bottom-10 z-20 hidden lg:block"
+                >
+                  <div className="relative group">
+                    <div className="absolute inset-0 bg-red-400 blur-2xl opacity-30 group-hover:opacity-60 transition-opacity" />
+                    <img src="https://img.icons8.com/color/180/crayon-shin-chan.png" alt="Shinchan" className="w-40 h-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.4)] relative" />
+                  </div>
+                </motion.div>
+
+                <motion.div 
+                  animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.3, 1] }}
+                  transition={{ duration: 2, repeat: Infinity }}
+                  className="absolute -top-24 -right-24 z-30 bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500 text-white px-8 py-5 rounded-full font-black shadow-[0_15px_40px_rgba(0,0,0,0.2)] border-4 border-white text-2xl uppercase tracking-tighter"
+                >
+                  REYANSH!
+                </motion.div>
+
+                <div className="group relative">
+                  <div className="absolute -inset-10 bg-gradient-to-tr from-brand-peach via-white to-brand-magenta rounded-[6rem] blur-3xl opacity-50 group-hover:opacity-80 transition-all duration-1000 animate-pulse" />
+                  <div className="relative z-10 p-2 bg-white rounded-[6rem] shadow-2xl transform-gpu hover:scale-105 transition-transform duration-700">
+                    <img 
+                      src="https://i.ibb.co/G4rrD3Q4/IMG-20260419-WA0112.jpg" 
+                      alt="Reyansh Singh" 
+                      className="w-72 h-72 md:w-[28rem] md:h-[28rem] object-cover rounded-[5rem] shadow-inner"
+                    />
+                  </div>
+                </div>
               </div>
 
               <div className="mt-8 space-y-2">

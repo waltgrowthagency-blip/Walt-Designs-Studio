@@ -68,8 +68,8 @@ export default function Home() {
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a href="/services" className="px-10 py-5 bg-white text-brand-navy-violet border-2 border-brand-navy-violet rounded-2xl font-bold text-lg hover:bg-brand-navy-violet hover:text-white transition-all flex items-center justify-center shadow-md">
-                  Explore Services
+                <a href="/special-guests" className="px-10 py-5 bg-brand-magenta text-white border-2 border-white/20 rounded-2xl font-bold text-lg hover:bg-brand-navy-violet transition-all flex items-center justify-center shadow-xl animate-bounce-slow">
+                  Lime Green Specials💚
                 </a>
               </motion.div>
             </motion.div>
