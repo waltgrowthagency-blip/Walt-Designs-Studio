@@ -18,16 +18,15 @@ export default function SpecialGuests() {
   return (
     <PageWrapper>
       <style>{`
-        @keyframes rgbLime {
-          0% { background-color: #ff0000; }
-          25% { background-color: #00ff00; }
-          50% { background-color: #0000ff; }
-          75% { background-color: #32cd32; }
-          100% { background-color: #ff0000; }
+        @keyframes yellowSlowPulse {
+          0% { background-color: #facc15; }
+          33% { background-color: #fbbf24; }
+          66% { background-color: #f59e0b; }
+          100% { background-color: #facc15; }
         }
         .animated-bg {
-          animation: rgbLime 10s infinite;
-          transition: background-color 2s ease-in-out;
+          animation: yellowSlowPulse 15s infinite ease-in-out;
+          transition: background-color 3s ease-in-out;
         }
       `}</style>
       <div className="relative min-h-screen overflow-hidden animated-bg">
@@ -41,10 +40,10 @@ export default function SpecialGuests() {
                 initial={{ x: 0 }}
                 animate={{ x: '-100%' }}
                 transition={{ duration: 2, ease: [0.77, 0, 0.175, 1], delay: 0.5 }}
-                className="fixed inset-y-0 left-0 w-1/2 bg-gradient-to-r from-red-600 via-yellow-500 to-green-600 z-[200] border-r-[12px] border-double border-yellow-300 shadow-[20px_0_50px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center pt-20"
+                className="fixed inset-y-0 left-0 w-1/2 bg-gradient-to-r from-yellow-400 via-yellow-500 to-yellow-600 z-[200] border-r-[12px] border-double border-white shadow-[20px_0_50px_rgba(0,0,0,0.3)] flex flex-col items-center justify-center pt-20"
               >
                 <div className="rotate-[-90deg] whitespace-nowrap">
-                  <h1 className="text-6xl font-black text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] uppercase tracking-tighter">
+                  <h1 className="text-6xl font-black text-brand-navy-violet drop-shadow-[0_5px_15px_rgba(255,255,255,0.5)] uppercase tracking-tighter">
                     WELCOME TO REYANSH'S PARTY
                   </h1>
                 </div>
@@ -53,10 +52,10 @@ export default function SpecialGuests() {
                 initial={{ x: 0 }}
                 animate={{ x: '100%' }}
                 transition={{ duration: 2, ease: [0.77, 0, 0.175, 1], delay: 0.5 }}
-                className="fixed inset-y-0 right-0 w-1/2 bg-gradient-to-l from-blue-600 via-indigo-500 to-purple-600 z-[200] border-l-[12px] border-double border-yellow-300 shadow-[-20px_0_50px_rgba(0,0,0,0.5)] flex flex-col items-center justify-center pt-20"
+                className="fixed inset-y-0 right-0 w-1/2 bg-gradient-to-l from-yellow-400 via-yellow-500 to-yellow-600 z-[200] border-l-[12px] border-double border-white shadow-[-20px_0_50px_rgba(0,0,0,0.3)] flex flex-col items-center justify-center pt-20"
               >
                 <div className="rotate-[90deg] whitespace-nowrap">
-                  <h1 className="text-6xl font-black text-white drop-shadow-[0_5px_15px_rgba(0,0,0,0.5)] uppercase tracking-tighter">
+                  <h1 className="text-6xl font-black text-brand-navy-violet drop-shadow-[0_5px_15px_rgba(255,255,255,0.5)] uppercase tracking-tighter">
                     LIME GREEN SPECIALS
                   </h1>
                 </div>
@@ -161,9 +160,9 @@ export default function SpecialGuests() {
                 <motion.div 
                   animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.3, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute -top-24 -right-24 z-30 bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500 text-white px-8 py-5 rounded-full font-black shadow-[0_15px_40px_rgba(0,0,0,0.2)] border-4 border-white text-2xl uppercase tracking-tighter"
+                  className="absolute left-1/2 -translate-x-1/2 -top-24 z-30 bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500 text-white px-8 py-5 rounded-full font-black shadow-[0_15px_40px_rgba(0,0,0,0.2)] border-4 border-white text-xl uppercase tracking-tighter whitespace-nowrap"
                 >
-                  REYANSH!
+                  HAPPY BIRTHDAY!
                 </motion.div>
 
                 <div className="group relative">
