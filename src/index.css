@@ -1,0 +1,61 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --color-bubblegum: #ef476f;
+  --color-royalgold: #ffd166;
+  --color-emerald-walt: #06d6a0;
+  --color-ocean: #118ab2;
+  --color-dark-teal: #073b4c;
+  --color-brand-navy-violet: #1e1b4b;
+  --color-brand-purple: #6b21a8;
+  --color-brand-brown: #451a03;
+  --color-brand-peach: #ffcc99;
+  --color-brand-magenta-dark: #300030;
+  --color-brand-pink-light: #ffebf3;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-gray-900 antialiased overflow-x-hidden;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+
+.animate-ping {
+  animation: ping 1s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-bounce-slow {
+  animation: bounce 3s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(-5%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
