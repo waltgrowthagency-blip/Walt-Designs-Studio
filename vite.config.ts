@@ -8,7 +8,7 @@ export default defineConfig(({mode}) => {
   return {
     plugins: [react(), tailwindcss()],
     define: {
-      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+      'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY || env.DEFAULT_GEMINI_API_KEY),
     },
     resolve: {
       alias: {
@@ -16,16 +16,7 @@ export default defineConfig(({mode}) => {
       },
     },
     build: {
-      rollupOptions: {
-        input: {
-          main: path.resolve(__dirname, 'index.html'),
-          services: path.resolve(__dirname, 'services.html'),
-          about: path.resolve(__dirname, 'about.html'),
-          growth: path.resolve(__dirname, 'growth.html'),
-          contact: path.resolve(__dirname, 'contact.html'),
-          testimonials: path.resolve(__dirname, 'testimonials.html'),
-        },
-      },
+      outDir: 'dist',
     },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
