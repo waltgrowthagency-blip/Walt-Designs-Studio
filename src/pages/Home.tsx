@@ -5,15 +5,15 @@ import { motion } from 'motion/react';
 export default function Home() {
   return (
     <PageWrapper>
-      {/* Hero Section - Dark Magenta Background */}
-      <section className="relative py-16 lg:py-28 overflow-hidden bg-brand-magenta-dark">
+      {/* Hero Section - Magenta Background */}
+      <section className="relative pt-8 pb-16 lg:pt-12 lg:pb-28 overflow-hidden bg-brand-magenta">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <motion.div 
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="space-y-8 text-center lg:text-left"
+              className="space-y-6 text-center lg:text-left mt-[-20px]"
               style={{ transformStyle: 'preserve-3d' }}
             >
               <motion.div 
@@ -200,12 +200,16 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-6">
               <div className="flex -space-x-2">
-                {[1, 2, 3].map(i => (
-                  <img key={i} src={`https://i.pravatar.cc/150?u=client${i}`} className="w-12 h-12 rounded-full border-4 border-white shadow-sm" alt="Client" />
+                {[
+                  "https://randomuser.me/api/portraits/men/32.jpg",
+                  "https://randomuser.me/api/portraits/women/44.jpg",
+                  "https://randomuser.me/api/portraits/men/85.jpg"
+                ].map((img, i) => (
+                  <img key={i} src={img} className="w-12 h-12 rounded-full border-4 border-white shadow-sm" alt="Indian Client" />
                 ))}
               </div>
               <h2 className="text-3xl font-bold text-gray-900 tracking-tight">Our Clients Say It Best</h2>
-              <p className="text-gray-600 leading-relaxed">Join the growing list of successful businesses powered by Walt Designs & Studio.</p>
+              <p className="text-gray-600 leading-relaxed font-medium">Join the growing list of successful businesses powered by Walt Designs & Studio.</p>
               <div className="flex items-center space-x-2">
                 <div className="flex text-orange-400">
                   {[1, 2, 3, 4, 5].map(i => <Star key={i} className="h-5 w-5 fill-current" />)}
@@ -215,14 +219,15 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4 lg:gap-8">
               {[
-                { name: 'Mithila Catering', role: 'Event Management', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
-                { name: 'Kaushalyan Consulting', role: 'Business Consulting', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
-                { name: 'Kaushik Caterers', role: 'Hospitality', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
+                { name: 'Rahul Sharma', role: 'Event Management', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
+                { name: 'Priya Patel', role: 'Business Consulting', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
+                { name: 'Amit Verma', role: 'Hospitality', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
                 { name: 'Anjali Sharma', role: 'Marketing Head', text: 'Strategic and creative. Their digital marketing strategies doubled our ROI in the first quarter itself.' }
               ].map((t, idx) => (
-                <div key={idx} className="p-6 bg-white rounded-2xl border border-white/20 relative group hover:shadow-xl transition-all h-full flex flex-col justify-between">
-                  <p className="text-gray-700 italic text-[11px] lg:text-xs mb-4 leading-relaxed line-clamp-4">"{t.text}"</p>
-                  <div>
+                <div key={idx} className="p-6 bg-white rounded-2xl border-4 border-brand-magenta/20 relative group hover:border-brand-magenta hover:shadow-2xl transition-all h-full flex flex-col justify-between overflow-hidden">
+                  <div className="absolute inset-0 bg-brand-magenta/5 animate-pulse opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+                  <p className="text-gray-700 italic text-[11px] lg:text-xs mb-4 leading-relaxed line-clamp-4 relative z-10">"{t.text}"</p>
+                  <div className="relative z-10">
                     <div className="font-bold text-gray-900 text-xs">{t.name}</div>
                     <div className="text-[8px] text-gray-500 italic uppercase tracking-widest mt-0.5">{t.role}</div>
                   </div>

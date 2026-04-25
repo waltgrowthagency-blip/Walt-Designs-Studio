@@ -24,10 +24,15 @@ export default function ChatbotButton() {
                 <X className="h-5 w-5" />
               </button>
             </div>
-            <div className="p-8 h-64 flex items-center justify-center text-center">
+            <div className="p-8 h-64 flex flex-col items-center justify-center text-center">
               <div className="space-y-4">
                 <div className="w-12 h-12 bg-brand-peach/20 rounded-2xl flex items-center justify-center text-brand-navy-violet mx-auto">
                    <MessageCircle className="h-6 w-6" />
+                </div>
+                <div className="flex space-x-1 justify-center py-2">
+                  <span className="w-2 h-2 bg-brand-navy-violet rounded-full animate-bounce" style={{ animationDelay: '0s' }}></span>
+                  <span className="w-2 h-2 bg-brand-navy-violet rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+                  <span className="w-2 h-2 bg-brand-navy-violet rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
                 </div>
                 <p className="text-gray-600 text-sm">Hello! How can we help scale your business today?</p>
                 <button className="w-full py-3 bg-brand-navy-violet text-white rounded-xl text-xs font-bold uppercase tracking-widest">

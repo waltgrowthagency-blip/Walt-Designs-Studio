@@ -104,6 +104,11 @@ export default function AIPlanner() {
                   >
                     <Loader2 className="h-10 w-10 text-brand-peach" />
                   </motion.div>
+                  <div className="flex space-x-1 justify-center">
+                    <span className="w-2 h-2 bg-brand-navy-violet rounded-full animate-bounce" style={{ animationDelay: '0s' }}></span>
+                    <span className="w-2 h-2 bg-brand-navy-violet rounded-full animate-bounce" style={{ animationDelay: '0.2s' }}></span>
+                    <span className="w-2 h-2 bg-brand-navy-violet rounded-full animate-bounce" style={{ animationDelay: '0.4s' }}></span>
+                  </div>
                   <p className="text-brand-navy-violet font-bold animate-pulse uppercase tracking-widest text-xs">Analyzing Market Data...</p>
                 </div>
               )}

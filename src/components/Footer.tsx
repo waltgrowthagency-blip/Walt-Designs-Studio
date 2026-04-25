@@ -13,7 +13,10 @@ export default function Footer() {
                 alt="Walt Designs & Studio" 
                 className="h-12 w-12 rounded-full border-2 border-white shadow-xl"
               />
-              <span className="text-xl font-bold tracking-widest uppercase">Walt <span className="text-brand-peach">Designs</span></span>
+              <span className="text-xl font-bold tracking-widest uppercase flex flex-col">
+                <span>Walt Designs & Studio</span>
+                <span className="text-brand-peach text-[10px] leading-none">(With Growth Agency)</span>
+              </span>
             </div>
             <p className="text-sm leading-relaxed text-white/70 italic">
               "Empowering brands through innovative design, strategic marketing, and comprehensive growth solutions."
@@ -32,11 +35,11 @@ export default function Footer() {
             <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs border-b border-white/20 pb-2 inline-block">Quick Links</h4>
             <ul className="space-y-4">
               {[
-                { name: 'Home', path: '/index.html' },
-                { name: 'Services', path: '/services.html' },
-                { name: 'About Us', path: '/about.html' },
-                { name: 'Walt Growth Agency', path: '/growth.html' },
-                { name: 'Contact Us', path: '/contact.html' },
+                { name: 'Home', path: '/' },
+                { name: 'Services', path: '/services' },
+                { name: 'About Us', path: '/about' },
+                { name: 'Walt Growth Agency', path: '/growth' },
+                { name: 'Contact Us', path: '/contact' },
               ].map((item) => (
                 <li key={item.name}>
                   <a href={item.path} className="text-xs uppercase tracking-widest hover:text-brand-peach transition-colors flex items-center group">
@@ -51,18 +54,28 @@ export default function Footer() {
           {/* Contact Details */}
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs border-b border-white/20 pb-2 inline-block">Contact Info</h4>
-            <ul className="space-y-6 text-xs">
+            <ul className="space-y-4 text-xs">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 text-brand-peach mr-3 shrink-0" />
-                <span className="leading-relaxed text-white/70">Delhi, India<br /><span className="opacity-50 italic text-[10px]">Head Office</span></span>
+                <span className="leading-relaxed text-white/70">
+                  Flat No. 402, Building A1, Near Metro Pillar 125,<br />
+                  Laxmi Nagar, New Delhi - 110092, India<br />
+                  <span className="opacity-50 italic text-[10px]">Head Office</span>
+                </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 text-brand-peach mr-3 shrink-0" />
-                <span className="text-white/70">+91 7303942175</span>
+                <div className="flex flex-col">
+                  <span className="text-white/70">+91 7303942175</span>
+                  <span className="text-white/50 text-[10px]">Mon-Sat, 10AM - 7PM</span>
+                </div>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 text-brand-peach mr-3 shrink-0" />
-                <span className="break-all italic hover:text-white cursor-pointer transition-colors text-white/70">waltdesignsstudio@gmail.com</span>
+                <div className="flex flex-col">
+                  <span className="break-all italic hover:text-white cursor-pointer transition-colors text-white/70">waltdesignsstudio@gmail.com</span>
+                  <span className="text-white/50 text-[10px]">Support Response: 24h</span>
+                </div>
               </li>
             </ul>
           </div>
@@ -85,7 +98,7 @@ export default function Footer() {
         </div>
 
         <div className="pt-8 border-t border-white/10 text-center text-xs text-white/80 font-medium">
-          &copy; 2026 Walt Designs & Studio &bull; Est. 2026
+          &copy; 2026 Walt Designs & Studio (With Growth Agency) &bull; Est. 2026
         </div>
       </div>
     </footer>
