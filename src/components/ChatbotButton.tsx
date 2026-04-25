@@ -21,11 +21,19 @@ export default function ChatbotButton() {
       const ai = new GoogleGenAI({ apiKey: process.env.GEMINI_API_KEY });
       const response = await ai.models.generateContent({
         model: "gemini-3-flash-preview",
-        systemInstruction: "You are Walt AI, a professional growth consultant for Walt Designs & Studio (With Growth Agency). You help clients with web design, graphic design, and digital marketing strategies. Be professional, direct, and helpful.",
-        contents: [...chatHistory.map(m => ({ role: m.role === 'user' ? 'user' : 'model', parts: [{ text: m.text }] })), { role: 'user', parts: [{ text: userMessage }] }],
+        contents: [
+          ...chatHistory.map(m => ({ 
+            role: m.role === 'user' ? 'user' : 'model', 
+            parts: [{ text: m.text }] 
+          })), 
+          { role: 'user', parts: [{ text: userMessage }] }
+        ],
+        config: {
+          systemInstruction: "You are Walt AI, a professional growth consultant for Walt Designs & Studio (With Growth Agency). You help clients with web design, graphic design, and digital marketing strategies. Be professional, direct, and helpful.",
+        }
       });
 
-      setChatHistory(prev => [...prev, { role: 'ai', text: response.text }]);
+      setChatHistory(prev => [...prev, { role: 'ai', text: response.text || '' }]);
     } catch (error) {
       console.error("AI Error:", error);
       setChatHistory(prev => [...prev, { role: 'ai', text: "I'm sorry, I encountered an error. Please try again or contact us directly." }]);

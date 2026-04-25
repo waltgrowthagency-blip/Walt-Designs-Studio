@@ -39,6 +39,7 @@ export default function Footer() {
                 { name: 'Services', path: '/services' },
                 { name: 'About Us', path: '/about' },
                 { name: 'Walt Growth Agency', path: '/growth' },
+                { name: 'Special Guests', path: '/special-guests' },
                 { name: 'Contact Us', path: '/contact' },
               ].map((item) => (
                 <li key={item.name}>

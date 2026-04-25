@@ -8,6 +8,7 @@ import Services from './pages/Services';
 import About from './pages/About';
 import Growth from './pages/Growth';
 import Contact from './pages/Contact';
+import SpecialGuests from './pages/SpecialGuests';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -30,6 +31,7 @@ export default function App() {
             <Route path="/about" element={<About />} />
             <Route path="/growth" element={<Growth />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/special-guests" element={<SpecialGuests />} />
           </Routes>
         </main>
         <Footer />

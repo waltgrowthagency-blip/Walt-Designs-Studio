@@ -7,6 +7,7 @@ const navLinks = [
   { name: 'Services', path: '/services' },
   { name: 'About Us', path: '/about' },
   { name: 'Walt Growth Agency', path: '/growth', trending: true },
+  { name: 'Special Guests', path: '/special-guests' },
   { name: 'Contact Us', path: '/contact' },
 ];
 
