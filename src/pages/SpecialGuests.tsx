@@ -2,6 +2,8 @@ import { motion, AnimatePresence } from 'motion/react';
 import { useState, useEffect } from 'react';
 import { Cake, Gift, Heart, Star, Sparkles, Send, PartyPopper, Coffee, Pizza, Cookie } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
+import BirthdayMarquee from '../components/BirthdayMarquee';
+import confetti from 'canvas-confetti';
 
 export default function SpecialGuests() {
   const [isOpening, setIsOpening] = useState(true);
@@ -13,10 +15,24 @@ export default function SpecialGuests() {
     return () => clearTimeout(timer);
   }, []);
 
+  const triggerConfetti = () => {
+    const scalar = 2;
+    const triangle = confetti.shapeFromPath({ path: 'M0 10 L5 0 L10 10z' });
+
+    confetti({
+      shapes: [triangle],
+      particleCount: 150,
+      spread: 70,
+      origin: { y: 0.6 },
+      colors: ['#facc15', '#ef4444', '#32cd32', '#3b82f6', '#a855f7']
+    });
+  };
+
   const decorativeIcons = [Cake, Gift, Heart, Star, PartyPopper, Coffee, Pizza, Cookie];
 
   return (
     <PageWrapper>
+      <BirthdayMarquee />
       <style>{`
         @keyframes yellowSlowPulse {
           0% { background-color: #facc15; }
@@ -31,6 +47,16 @@ export default function SpecialGuests() {
       `}</style>
       <div className="relative min-h-screen overflow-hidden animated-bg">
         <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]" />
+        
+        {/* Floating Party Popper Button */}
+        <motion.button
+          whileHover={{ scale: 1.1, rotate: 10 }}
+          whileTap={{ scale: 0.9 }}
+          onClick={triggerConfetti}
+          className="fixed bottom-10 right-10 z-[100] w-20 h-20 bg-yellow-400 text-red-600 rounded-full shadow-[0_20px_50px_rgba(255,50,50,0.4)] flex items-center justify-center border-4 border-white animate-bounce-slow"
+        >
+          <PartyPopper className="h-10 w-10" />
+        </motion.button>
         
         {/* Curtain Opening Animation */}
         <AnimatePresence>
@@ -103,17 +129,18 @@ export default function SpecialGuests() {
               <motion.div 
                 animate={{ 
                   backgroundColor: ['#ff0000', '#00ff00', '#0000ff', '#32cd32', '#ff0000'],
-                  scale: [1, 1.1, 1],
-                  rotateZ: [0, 2, -2, 0]
+                  scale: [1, 1.05, 1],
+                  rotateZ: [0, 1, -1, 0]
                 }}
                 transition={{ duration: 5, repeat: Infinity }}
-                className="inline-block px-10 py-6 rounded-[3rem] shadow-[0_20px_80px_rgba(255,255,255,0.5)] mb-12 border-8 border-white transform-gpu hover:rotate-2 transition-transform cursor-default"
+                className="inline-block px-10 py-6 rounded-[3rem] shadow-[0_20px_80px_rgba(255,255,255,0.4)] mb-20 border-8 border-white transform-gpu hover:rotate-1 transition-transform cursor-default relative z-10"
               >
                 <h1 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tighter drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]">
                   💚 Lime Green Specials 💚
                 </h1>
               </motion.div>
-                       <div className="relative inline-block mt-4">
+
+              <div className="relative inline-block mt-20 mb-12">
                 {/* 3D Popping Elements */}
                 <motion.div
                   animate={{ 
@@ -121,7 +148,7 @@ export default function SpecialGuests() {
                     rotate: [0, 10, -10, 0],
                   }}
                   transition={{ duration: 3, repeat: Infinity }}
-                  className="absolute -top-20 -left-20 z-40 bg-gradient-to-tr from-pink-500 to-yellow-400 p-6 rounded-full shadow-[0_10px_40px_rgba(255,100,255,0.6)] border-4 border-white text-3xl hidden md:block"
+                  className="absolute -top-16 -left-16 z-40 bg-gradient-to-tr from-pink-500 to-yellow-400 p-4 rounded-full shadow-[0_10px_40px_rgba(255,100,255,0.6)] border-4 border-white text-2xl hidden md:block"
                 >
                   🎉
                 </motion.div>
@@ -134,11 +161,11 @@ export default function SpecialGuests() {
                     scale: [1, 1.1, 1]
                   }}
                   transition={{ duration: 3.5, repeat: Infinity }}
-                  className="absolute -left-40 top-10 z-20 hidden lg:block"
+                  className="absolute -left-44 top-0 z-20 hidden lg:block"
                 >
                   <div className="relative group">
                     <div className="absolute inset-0 bg-blue-400 blur-2xl opacity-30 group-hover:opacity-60 transition-opacity" />
-                    <img src="https://img.icons8.com/color/180/doraemon.png" alt="Doraemon" className="w-40 h-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.4)] relative" />
+                    <img src="https://img.icons8.com/color/160/doraemon.png" alt="Doraemon" className="w-32 h-32 drop-shadow-[0_20px_20px_rgba(0,0,0,0.4)] relative" />
                   </div>
                 </motion.div>
 
@@ -149,18 +176,18 @@ export default function SpecialGuests() {
                     scale: [1, 1.05, 1]
                   }}
                   transition={{ duration: 4, repeat: Infinity, delay: 0.5 }}
-                  className="absolute -right-40 bottom-10 z-20 hidden lg:block"
+                  className="absolute -right-44 bottom-0 z-20 hidden lg:block"
                 >
                   <div className="relative group">
                     <div className="absolute inset-0 bg-red-400 blur-2xl opacity-30 group-hover:opacity-60 transition-opacity" />
-                    <img src="https://img.icons8.com/color/180/crayon-shin-chan.png" alt="Shinchan" className="w-40 h-40 drop-shadow-[0_20px_20px_rgba(0,0,0,0.4)] relative" />
+                    <img src="https://img.icons8.com/color/160/crayon-shin-chan.png" alt="Shinchan" className="w-32 h-32 drop-shadow-[0_20px_20px_rgba(0,0,0,0.4)] relative" />
                   </div>
                 </motion.div>
 
                 <motion.div 
-                  animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.3, 1] }}
+                  animate={{ rotate: [0, 15, -15, 0], scale: [1, 1.2, 1] }}
                   transition={{ duration: 2, repeat: Infinity }}
-                  className="absolute left-1/2 -translate-x-1/2 -top-24 z-30 bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500 text-white px-8 py-5 rounded-full font-black shadow-[0_15px_40px_rgba(0,0,0,0.2)] border-4 border-white text-xl uppercase tracking-tighter whitespace-nowrap"
+                  className="absolute left-1/2 -translate-x-1/2 -top-24 z-30 bg-gradient-to-br from-yellow-300 via-orange-400 to-red-500 text-white px-6 py-3 rounded-full font-black shadow-[0_15px_40px_rgba(0,0,0,0.2)] border-4 border-white text-lg uppercase tracking-tighter whitespace-nowrap"
                 >
                   HAPPY BIRTHDAY!
                 </motion.div>

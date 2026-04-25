@@ -2,14 +2,14 @@ import { Star, CheckCircle2, Quote, ArrowRight } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 
 const allTestimonials = [
-  { name: 'Mithila Catering', role: 'Event Management', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
-  { name: 'Kaushalyan Consulting', role: 'Business Consulting', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
-  { name: 'Kaushik Caterers', role: 'Hospitality', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
+  { name: 'Ranjan Kumar', role: 'Mithila Catering', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
+  { name: 'Vikash Kumar', role: 'Kaushalayan Consulting', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
+  { name: 'Rahul Kaushik', role: 'Kaushik Caterers', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
+  { name: 'Rahul Dogra', role: 'Lalaji Caterers', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' },
   { name: 'Aakash Digital', role: 'Tech SaaS', text: 'Walt Designs helped us scale our user base by 300% in just 6 months. Highly recommended!' },
   { name: 'Royal Interiors', role: 'Real Estate', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' },
   { name: 'Green Valley', role: 'Agriculture', text: 'Professional team with a deep understanding of market dynamics. Their growth strategies are game-changers.' },
   { name: 'Global Logistics', role: 'Shipping', text: 'Efficient, creative, and reliable. They are our go-to partners for all things design and marketing.' },
-  { name: 'FitLife Gym', role: 'Fitness', text: 'Their social media marketing campaigns brought in more members than we ever expected.' },
 ];
 
 export default function Testimonials() {

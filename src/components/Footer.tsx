@@ -22,9 +22,14 @@ export default function Footer() {
               "Empowering brands through innovative design, strategic marketing, and comprehensive growth solutions."
             </p>
             <div className="flex space-x-4">
-              {[Instagram, Facebook, Linkedin, Twitter].map((Icon, idx) => (
-                <a key={idx} href="#" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-peach hover:text-brand-brown transition-all">
-                  <Icon className="h-4 w-4" />
+              {[
+                { Icon: Instagram, href: 'https://www.instagram.com/waltdesignsstudio?igsh=MTB0a3VsaDhqdzc0bQ==' },
+                { Icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61573315777763' },
+                { Icon: Linkedin, href: '#' },
+                { Icon: Twitter, href: '#' }
+              ].map((item, idx) => (
+                <a key={idx} href={item.href} target="_blank" rel="noopener noreferrer" className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-brand-peach hover:text-brand-brown transition-all">
+                  <item.Icon className="h-4 w-4" />
                 </a>
               ))}
             </div>
@@ -55,28 +60,28 @@ export default function Footer() {
           {/* Contact Details */}
           <div>
             <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs border-b border-white/20 pb-2 inline-block">Contact Info</h4>
-            <ul className="space-y-4 text-xs">
-              <li className="flex items-start">
-                <MapPin className="h-5 w-5 text-brand-peach mr-3 shrink-0" />
-                <span className="leading-relaxed text-white/70">
-                  Flat No. 402, Building A1, Near Metro Pillar 125,<br />
-                  Laxmi Nagar, New Delhi - 110092, India<br />
-                  <span className="opacity-50 italic text-[10px]">Head Office</span>
-                </span>
+            <ul className="space-y-4 text-[10px] uppercase tracking-tight">
+              <li className="space-y-1">
+                <div className="text-brand-peach font-black">Founder</div>
+                <div className="font-bold text-white">Priyanshu Kumar</div>
+                <div className="text-white/70 tracking-widest">+91 7303942175</div>
               </li>
-              <li className="flex items-center">
-                <Phone className="h-5 w-5 text-brand-peach mr-3 shrink-0" />
-                <div className="flex flex-col">
-                  <span className="text-white/70">+91 7303942175</span>
-                  <span className="text-white/50 text-[10px]">Mon-Sat, 10AM - 7PM</span>
-                </div>
+              <li className="space-y-1">
+                <div className="text-brand-peach font-black">Co-Founder</div>
+                <div className="font-bold text-white">Sahil Kumar</div>
+                <div className="text-white/70 tracking-widest">+91 9818900077</div>
               </li>
-              <li className="flex items-center">
-                <Mail className="h-5 w-5 text-brand-peach mr-3 shrink-0" />
-                <div className="flex flex-col">
-                  <span className="break-all italic hover:text-white cursor-pointer transition-colors text-white/70">waltdesignsstudio@gmail.com</span>
-                  <span className="text-white/50 text-[10px]">Support Response: 24h</span>
-                </div>
+              <li className="pt-2 italic">
+                <div className="text-white/40 mb-1">Work with us</div>
+                <div className="text-white font-bold break-all">waltdesignsstudio@gmail.com</div>
+              </li>
+              <li className="italic">
+                <div className="text-white/40 mb-1">Growth Agency</div>
+                <div className="text-white font-bold break-all">waltgrowthagency@gmail.com</div>
+              </li>
+              <li className="pt-4 flex items-center">
+                <MapPin className="h-4 w-4 text-brand-peach mr-2" />
+                <span className="text-white font-bold">Delhi, India</span>
               </li>
             </ul>
           </div>

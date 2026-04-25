@@ -1,5 +1,6 @@
 import { ArrowRight, Star, CheckCircle2, Layout, Zap, TrendingUp, Globe } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
+import BirthdayMarquee from '../components/BirthdayMarquee';
 import { motion, useMotionValue, useTransform, animate } from 'motion/react';
 import { useEffect } from 'react';
 
@@ -18,6 +19,7 @@ function Counter({ value, suffix = "" }: { value: number; suffix?: string }) {
 export default function Home() {
   return (
     <PageWrapper>
+      <BirthdayMarquee />
       {/* Hero Section - Magenta Background */}
       <section className="relative pt-8 pb-16 lg:pt-12 lg:pb-28 overflow-hidden bg-brand-magenta">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -205,10 +207,10 @@ export default function Home() {
             </div>
             <div className="grid grid-cols-2 gap-4 lg:gap-8">
               {[
-                { name: 'Rahul Sharma', role: 'Event Management', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
-                { name: 'Priya Patel', role: 'Business Consulting', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
-                { name: 'Amit Verma', role: 'Hospitality', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
-                { name: 'Anjali Sharma', role: 'Marketing Head', text: 'Strategic and creative. Their digital marketing strategies doubled our ROI in the first quarter itself.' }
+                { name: 'Ranjan Kumar', role: 'Mithila Catering', text: 'Amazing service and growth strategies. They handled our digital presence with extreme care and professionalism.' },
+                { name: 'Vikash Kumar', role: 'Kaushalayan Consulting', text: 'Professionalism at its best. The team is dedicated and their results speak louder than words.' },
+                { name: 'Rahul Kaushik', role: 'Kaushik Caterers', text: 'Exceeded our expectations in every way. From branding to digital reach, everything was top-notch.' },
+                { name: 'Rahul Dogra', role: 'Lalaji Caterers', text: 'The visual identity they created for us is simply stunning. We get compliments from every client.' }
               ].map((t, idx) => (
                 <div key={idx} className="p-6 bg-white rounded-2xl border-4 border-brand-magenta/20 relative group hover:border-brand-magenta hover:shadow-2xl transition-all h-full flex flex-col justify-between overflow-hidden">
                   <div className="absolute inset-0 bg-brand-magenta/5 animate-pulse opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
