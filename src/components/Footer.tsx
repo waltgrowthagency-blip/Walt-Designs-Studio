@@ -8,11 +8,13 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-              <img 
-                src="https://i.ibb.co/ymwt8N0m/IMG-20260425-040622.jpg" 
-                alt="Walt Designs & Studio" 
-                className="h-12 w-12 rounded-full border-2 border-white shadow-xl"
-              />
+              <a href="/">
+                <img 
+                  src="https://i.ibb.co/ymwt8N0m/IMG-20260425-040622.jpg" 
+                  alt="Walt Designs & Studio" 
+                  className="h-12 w-12 rounded-full border-2 border-white shadow-xl hover:scale-105 transition-transform"
+                />
+              </a>
               <span className="text-xl font-bold tracking-widest uppercase flex flex-col">
                 <span>Walt Designs & Studio</span>
                 <span className="text-brand-peach text-[10px] leading-none">(With Growth Agency)</span>
@@ -41,11 +43,11 @@ export default function Footer() {
             <ul className="space-y-4">
               {[
                 { name: 'Home', path: '/' },
-                { name: 'Services', path: '/services' },
-                { name: 'About Us', path: '/about' },
-                { name: 'Walt Growth Agency', path: '/growth' },
-                { name: 'Lime Green Specials💚', path: '/special-guests' },
-                { name: 'Contact Us', path: '/contact' },
+                { name: 'Services', path: '/services.html' },
+                { name: 'About Us', path: '/about.html' },
+                { name: 'Walt Growth Agency', path: '/growth.html' },
+                { name: 'Lime Green Specials💚', path: '/special-guests.html' },
+                { name: 'Contact Us', path: '/contact.html' },
               ].map((item) => (
                 <li key={item.name}>
                   <a href={item.path} className="text-[11px] font-medium hover:text-brand-peach transition-colors flex items-center group">

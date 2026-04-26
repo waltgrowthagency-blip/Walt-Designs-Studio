@@ -1,25 +1,19 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { Menu, X, ArrowRight } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 
 const navLinks = [
   { name: 'Home', path: '/' },
-  { name: 'Services', path: '/services' },
-  { name: 'About Us', path: '/about' },
-  { name: 'Walt Growth Agency', path: '/growth', trending: true },
-  { name: 'Lime Green Specials💚', path: '/special-guests', highlight: true },
-  { name: 'Contact Us', path: '/contact' },
+  { name: 'Services', path: '/services.html' },
+  { name: 'About Us', path: '/about.html' },
+  { name: 'Walt Growth Agency', path: '/growth.html', trending: true },
+  { name: 'Lime Green Specials💚', path: '/special-guests.html', highlight: true },
+  { name: 'Contact Us', path: '/contact.html' },
 ];
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [scrolled, setScrolled] = useState(false);
-
-  useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
 
   return (
     <nav 
@@ -54,7 +48,7 @@ export default function Navbar() {
                 key={link.name}
                 href={link.path}
                 className={`relative text-xs font-medium transition-all hover:text-brand-peach ${
-                  window.location.pathname === link.path 
+                  currentPath === link.path || (currentPath === '/' && link.path === '/')
                     ? 'text-brand-peach border-b-2 border-brand-peach pb-1' 
                     : link.highlight
                       ? 'text-brand-magenta bg-brand-magenta/10 px-3 py-1 rounded-full animate-bounce shadow-sm'
@@ -70,7 +64,7 @@ export default function Navbar() {
               </a>
             ))}
             <a 
-              href="/contact" 
+              href="/contact.html" 
               className="bg-white hover:bg-brand-peach text-brand-navy-violet px-6 py-2.5 rounded-full text-[10px] font-bold uppercase tracking-[0.2em] transition-all flex items-center group shadow-lg"
             >
               Consult Now
@@ -101,27 +95,30 @@ export default function Navbar() {
           >
             <div className="p-8 space-y-6">
               {navLinks.map((link) => (
-                <motion.a
+                <motion.div
                   initial={{ x: -20, opacity: 0 }}
                   animate={{ x: 0, opacity: 1 }}
                   key={link.name}
-                  href={link.path}
-                  className={`text-sm font-medium flex items-center justify-between transition-all ${
-                    window.location.pathname === link.path 
-                      ? 'text-brand-peach' 
-                      : link.highlight 
-                        ? 'text-brand-peach bg-brand-peach/10 px-4 py-2 rounded-xl animate-pulse' 
-                        : 'text-white'
-                  }`}
-                  onClick={() => setIsOpen(false)}
                 >
-                  {link.name}
-                  {link.trending && (
-                    <span className="bg-brand-peach text-brand-navy-violet text-[10px] px-2 py-1 rounded-full">
-                      TRENDING
-                    </span>
-                  )}
-                </motion.a>
+                  <a
+                    href={link.path}
+                    className={`text-sm font-medium flex items-center justify-between transition-all ${
+                      currentPath === link.path 
+                        ? 'text-brand-peach' 
+                        : link.highlight 
+                          ? 'text-brand-peach bg-brand-peach/10 px-4 py-2 rounded-xl animate-pulse' 
+                          : 'text-white'
+                    }`}
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.name}
+                    {link.trending && (
+                      <span className="bg-brand-peach text-brand-navy-violet text-[10px] px-2 py-1 rounded-full">
+                        TRENDING
+                      </span>
+                    )}
+                  </a>
+                </motion.div>
               ))}
             </div>
           </motion.div>
@@ -130,3 +127,4 @@ export default function Navbar() {
     </nav>
   );
 }
+

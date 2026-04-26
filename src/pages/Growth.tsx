@@ -1,150 +1,150 @@
-import { Rocket, BarChart3, Globe, Zap, CheckCircle, TrendingUp, Search, Share2 } from 'lucide-react';
+import { Rocket, BarChart3, Globe, Zap, CheckCircle, TrendingUp, Search, Share2, ArrowRight } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 import { motion } from 'motion/react';
 
 export default function Growth() {
   return (
     <PageWrapper>
-      {/* Premium Hero */}
-      <section className="bg-brand-navy-violet py-32 relative overflow-hidden">
-        <div className="absolute top-0 right-0 w-full h-full opacity-20 pointer-events-none">
-          <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-brand-purple rounded-full blur-[120px] animate-pulse" />
-          <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-brand-peach rounded-full blur-[120px]" />
+      {/* Dark Wine World Hero */}
+      <section className="bg-[#2D060F] py-32 relative overflow-hidden min-h-[90vh] flex items-center">
+        {/* Ambient Effects */}
+        <div className="absolute top-0 right-0 w-full h-full opacity-30 pointer-events-none">
+          <div className="absolute top-0 right-0 w-[800px] h-[800px] bg-brand-magenta/30 rounded-full blur-[150px] -mr-96 -mt-96" />
+          <div className="absolute bottom-0 left-0 w-[600px] h-[600px] bg-brand-peach/10 rounded-full blur-[120px] -ml-48 -mb-48" />
         </div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center space-y-8 max-w-4xl mx-auto">
-            <motion.span 
-              initial={{ opacity: 0, y: 10 }}
-              animate={{ opacity: 1, y: 0 }}
-              className="inline-flex items-center space-x-2 px-4 py-2 bg-white/10 border border-white/20 rounded-full text-brand-peach text-[10px] font-bold uppercase tracking-widest"
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div className="space-y-10 text-left">
+              <motion.div
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                className="flex items-center space-x-4"
+              >
+                <div className="w-20 h-20 rounded-2xl overflow-hidden border-2 border-brand-peach/30 shadow-2xl p-1 bg-white">
+                  <img 
+                    src="https://i.ibb.co/67hZnKhd/Whats-App-Image-2026-04-26-at-10-29-37.jpg" 
+                    alt="Walt Growth Agency Logo" 
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+                <div className="space-y-1">
+                  <span className="inline-block px-3 py-1 bg-brand-peach/20 border border-brand-peach/30 rounded-full text-brand-peach text-[10px] font-bold uppercase tracking-widest">
+                    The Elite Division
+                  </span>
+                  <h2 className="text-white font-bold text-lg tracking-tight">Walt Growth Agency</h2>
+                </div>
+              </motion.div>
+
+              <div className="space-y-6">
+                <motion.h1 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.2 }}
+                  className="text-5xl lg:text-8xl font-bold text-white leading-[1.05] tracking-tight"
+                >
+                  Welcome to <br />
+                  <span className="text-brand-peach">Walt Growth Agency</span>
+                  <span className="text-2xl lg:text-3xl block mt-4 font-medium text-white/60">
+                    (a part of Walt Designs Group)
+                  </span>
+                </motion.h1>
+
+                <motion.p 
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.3 }}
+                  className="text-xl lg:text-2xl text-white/80 max-w-xl leading-relaxed font-medium"
+                >
+                  Connect with <span className="text-brand-peach font-bold">top brands</span>, broaden your audience, and turn your <span className="text-brand-magenta font-bold">influence into earnings</span>. Join a strong platform made for creators who think big, grow quickly, and push boundaries.
+                </motion.p>
+              </div>
+
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.4 }}
+                className="flex flex-wrap gap-6 pt-4"
+              >
+                <a href="/contact.html" className="group px-10 py-5 bg-brand-peach text-[#2D060F] font-black rounded-2xl transition-all shadow-[0_20px_40px_rgba(255,180,120,0.3)] hover:shadow-[0_20px_60px_rgba(255,180,120,0.5)] hover:scale-105 flex items-center space-x-3 text-lg uppercase tracking-tight">
+                  <span>I am Brand</span>
+                  <ArrowRight className="h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
+                <a href="/contact.html" className="group px-10 py-5 bg-white/5 border-2 border-white/20 text-white font-black rounded-2xl transition-all hover:bg-white/10 hover:scale-105 flex items-center space-x-3 text-lg uppercase tracking-tight">
+                  <span>I am an Influencer</span>
+                  <Rocket className="h-5 w-5 group-hover:-translate-y-1 transition-transform" />
+                </a>
+              </motion.div>
+              
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.6 }}
+                className="pt-10"
+              >
+                <a 
+                  href="/growth-services.html" 
+                  className="inline-flex items-center space-x-2 text-brand-peach font-bold uppercase tracking-widest text-xs hover:underline decoration-2 underline-offset-8"
+                >
+                  <TrendingUp className="h-4 w-4" />
+                  <span>Explore Our Premium Services</span>
+                </a>
+              </motion.div>
+            </div>
+
+            <motion.div 
+              initial={{ opacity: 0, scale: 0.9 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ delay: 0.3 }}
+              className="relative hidden lg:block"
             >
-              <Rocket className="h-3 w-3" />
-              <span>Walt Growth Agency</span>
-            </motion.span>
-            <motion.h1 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2 }}
-              className="text-4xl lg:text-7xl font-bold text-white leading-tight tracking-tight"
-            >
-              Scale Your Business <span className="text-brand-peach">Beyond Limits</span>
-            </motion.h1>
-            <motion.p 
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.4 }}
-              className="text-xl text-white/70 max-w-2xl mx-auto leading-relaxed"
-            >
-              We don't just market products; we build ecosystems of growth. Our premium agency model focuses on aggressive scaling, high-ROI marketing, and global brand dominance.
-            </motion.p>
+              <div className="absolute inset-0 bg-brand-magenta/40 blur-[100px] animate-pulse rounded-full" />
+              <div className="bg-gradient-to-br from-white/10 to-transparent backdrop-blur-md rounded-[4rem] p-16 border border-white/20 relative z-10 shadow-3xl">
+                <div className="space-y-10">
+                   <div className="text-brand-peach/80 font-bold uppercase tracking-[0.2em] text-sm">Performance Index</div>
+                   <div className="text-7xl lg:text-9xl font-bold text-white tracking-tighter">+350%</div>
+                   <p className="text-2xl font-medium text-white/70 leading-relaxed">
+                     Average growth seen by our full-agency partners in the first 12 months.
+                   </p>
+                   <div className="pt-10 grid grid-cols-2 gap-8 border-t border-white/10">
+                      <div>
+                        <div className="text-3xl font-bold text-white">1,200+</div>
+                        <div className="text-[10px] text-brand-peach uppercase font-black tracking-widest">Creators</div>
+                      </div>
+                      <div>
+                        <div className="text-3xl font-bold text-white">45+</div>
+                        <div className="text-[10px] text-brand-peach uppercase font-black tracking-widest">Global Brands</div>
+                      </div>
+                   </div>
+                </div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* What We Do */}
-      <section className="py-24 bg-brand-purple">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20 space-y-4">
-            <h2 className="text-3xl lg:text-5xl font-bold text-white tracking-tight">What We Do</h2>
-            <p className="text-white/80 font-medium">The intersection of data, creativity, and explosive growth.</p>
+      {/* Featured Insights Wrapper to maintain "Separate World" feel */}
+      <section className="bg-white py-24">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-16">
+          <div className="max-w-2xl mx-auto space-y-4">
+            <h2 className="text-3xl lg:text-5xl font-bold text-brand-navy-violet tracking-tight">The Growth Ecosystem</h2>
+            <p className="text-gray-500 font-medium text-lg italic">"Scaling isn't just about more; it's about better."</p>
           </div>
-          <div className="grid md:grid-cols-3 gap-12">
+          
+          <div className="grid md:grid-cols-3 gap-8">
             {[
-              {
-                title: 'Market Penetration',
-                icon: Globe,
-                desc: 'Identifying and securing market share through aggressive digital dominance and competitor analysis.'
-              },
-              {
-                title: 'Growth Marketing',
-                icon: TrendingUp,
-                desc: 'High-speed experimentation across marketing channels to find the most efficient path to scale.'
-              },
-              {
-                title: 'Conversion Optimization',
-                icon: Zap,
-                desc: 'Turning every visitor into a loyal customer with psychology-driven UI/UX and persuasive copy.'
-              }
+              { icon: Globe, title: "Global Reach", text: "Targeted expansion into international markets with localized precision." },
+              { icon: Zap, title: "Velocity", text: "Rapid campaign deployment that keeps you ahead of market trends." },
+              { icon: CheckCircle, title: "Quality", text: "Hand-picked partnerships that ensure brand alignment and integrity." }
             ].map((item, idx) => (
-              <div key={idx} className="p-10 bg-white rounded-[3rem] border-4 border-brand-navy-violet/10 hover:border-brand-navy-violet transition-all group">
-                <div className="w-16 h-16 bg-brand-peach/10 rounded-2xl flex items-center justify-center text-brand-navy-violet mb-8 group-hover:bg-brand-navy-violet group-hover:text-white transition-all">
+              <div key={idx} className="p-12 bg-white rounded-3xl border-2 border-gray-100 shadow-sm hover:shadow-xl transition-all">
+                <div className="w-16 h-16 bg-brand-navy-violet/5 rounded-2xl flex items-center justify-center text-brand-navy-violet mb-6">
                   <item.icon className="h-8 w-8" />
                 </div>
                 <h3 className="text-2xl font-bold text-brand-navy-violet mb-4">{item.title}</h3>
-                <p className="text-brand-navy-violet/70 leading-relaxed font-medium">{item.desc}</p>
+                <p className="text-gray-500 font-medium leading-relaxed">{item.text}</p>
               </div>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Strategy Section */}
-      <section className="py-24 bg-white overflow-hidden">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="order-2 lg:order-1 space-y-10">
-              <h2 className="text-3xl lg:text-5xl font-bold text-brand-navy-violet tracking-tight">Our Strategic Approach</h2>
-              <div className="space-y-8">
-                {[
-                  { title: 'Data Analysis', icon: BarChart3, text: 'We start with deep-dives into your current metrics and market position.' },
-                  { title: 'Strategic Roadmap', icon: Search, text: 'A custom-built calendar of growth milestones and performance markers.' },
-                  { title: 'Omnichannel Execution', icon: Share2, text: 'Simultaneous deployment across social, search, and content layers.' },
-                ].map((step, idx) => (
-                  <div key={idx} className="flex gap-6">
-                    <div className="shrink-0 w-12 h-12 bg-brand-peach/20 rounded-xl shadow-sm flex items-center justify-center text-brand-navy-violet">
-                      <step.icon className="h-6 w-6" />
-                    </div>
-                    <div>
-                      <h4 className="text-xl font-bold text-brand-navy-violet mb-2">{step.title}</h4>
-                      <p className="text-brand-navy-violet/60 font-medium">{step.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="order-1 lg:order-2 relative">
-              <div className="bg-brand-navy-violet rounded-[50px] p-8 lg:p-16 text-white space-y-8 shadow-2xl">
-                 <div className="text-brand-peach font-bold uppercase tracking-widest text-sm">Real-Time Impact</div>
-                 <div className="text-5xl lg:text-8xl font-bold tracking-tight">+350%</div>
-                 <div className="text-2xl font-medium opacity-80 leading-snug">Average growth seen by our full-agency clients in the first 12 months.</div>
-                 <div className="flex items-center gap-4 pt-8 border-t border-white/10">
-                    <div className="flex -space-x-2">
-                       {[1,2,3].map(i => <div key={i} className="w-10 h-10 rounded-full border-4 border-brand-navy-violet bg-white/20" />)}
-                    </div>
-                    <span className="text-sm font-medium">Trusted by leading brands</span>
-                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Results Section */}
-      <section className="py-24 bg-brand-brown">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-brand-navy-violet rounded-[4rem] p-12 lg:p-24 relative overflow-hidden shadow-2xl">
-             <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
-                <div className="space-y-8">
-                   <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight">Ready for Hyper-Growth?</h2>
-                   <p className="text-xl text-white/70 font-medium">Accepting only 3 new core agency clients this quarter. Apply for a growth audit today.</p>
-                   <a href="/contact" className="inline-block px-12 py-6 bg-brand-peach text-brand-navy-violet font-bold rounded-2xl transition-all shadow-xl text-lg uppercase tracking-widest hover:bg-white">
-                     Apply For Audit
-                   </a>
-                </div>
-                <div className="grid grid-cols-2 gap-6">
-                   {[
-                     { label: 'Market Reach', val: '10M+' },
-                     { label: 'Ad ROI', val: '4.8x' },
-                     { label: 'Leads Generated', val: '100k+' },
-                     { label: 'Client Retention', val: '98%' },
-                   ].map((stat, idx) => (
-                     <div key={idx} className="p-8 bg-white/10 border border-white/10 rounded-3xl backdrop-blur-sm">
-                        <div className="text-3xl font-bold text-white mb-1">{stat.val}</div>
-                        <div className="text-[10px] font-bold text-brand-peach uppercase tracking-widest">{stat.label}</div>
-                     </div>
-                   ))}
-                </div>
-             </div>
           </div>
         </div>
       </section>

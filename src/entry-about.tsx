@@ -1,13 +1,13 @@
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
-import Home from './pages/Home';
+import About from './pages/About';
 import SharedLayout from './components/SharedLayout';
 import './index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
     <SharedLayout>
-      <Home />
+      <About />
     </SharedLayout>
   </StrictMode>
 );

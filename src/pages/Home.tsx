@@ -66,11 +66,11 @@ export default function Home() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="flex flex-col sm:flex-row justify-center lg:justify-start gap-4"
               >
-                <a href="/contact" className="px-10 py-5 bg-brand-navy-violet text-white rounded-2xl font-bold text-lg hover:shadow-2xl transition-all flex items-center justify-center group">
+                <a href="/contact.html" className="px-10 py-5 bg-brand-navy-violet text-white rounded-2xl font-bold text-lg hover:shadow-2xl transition-all flex items-center justify-center group">
                   Start Your Project
                   <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
                 </a>
-                <a href="/special-guests" className="px-10 py-5 bg-yellow-400 text-brand-navy-violet border-2 border-brand-navy-violet/10 rounded-2xl font-bold text-lg hover:bg-brand-navy-violet hover:text-white transition-all flex items-center justify-center shadow-xl animate-bounce-slow">
+                <a href="/special-guests.html" className="px-10 py-5 bg-yellow-400 text-brand-navy-violet border-2 border-brand-navy-violet/10 rounded-2xl font-bold text-lg hover:bg-brand-navy-violet hover:text-white transition-all flex items-center justify-center shadow-xl animate-bounce-slow">
                   Lime Green Specials💚
                 </a>
               </motion.div>
@@ -172,7 +172,7 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-bold text-brand-navy-violet mb-4">{service.title}</h3>
                 <p className="text-brand-navy-violet/70 mb-6 leading-relaxed">{service.desc}</p>
-                <a href="/services" className="text-brand-navy-violet font-bold flex items-center hover:opacity-70 text-sm italic">
+                <a href="/services.html" className="text-brand-navy-violet font-bold flex items-center hover:opacity-70 text-sm italic">
                   Read More <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </div>
