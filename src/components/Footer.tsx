@@ -37,7 +37,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs border-b border-white/20 pb-2 inline-block">Quick Links</h4>
+            <h4 className="text-white font-bold mb-6 text-sm border-b border-white/20 pb-2 inline-block">Quick Links</h4>
             <ul className="space-y-4">
               {[
                 { name: 'Home', path: '/' },
@@ -48,7 +48,7 @@ export default function Footer() {
                 { name: 'Contact Us', path: '/contact' },
               ].map((item) => (
                 <li key={item.name}>
-                  <a href={item.path} className="text-xs uppercase tracking-widest hover:text-brand-peach transition-colors flex items-center group">
+                  <a href={item.path} className="text-[11px] font-medium hover:text-brand-peach transition-colors flex items-center group">
                     <ArrowRight className="h-3 w-3 mr-2 opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all text-brand-peach" />
                     {item.name}
                   </a>
@@ -59,8 +59,8 @@ export default function Footer() {
 
           {/* Contact Details */}
           <div>
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs border-b border-white/20 pb-2 inline-block">Contact Info</h4>
-            <ul className="space-y-4 text-[10px] uppercase tracking-tight">
+            <h4 className="text-white font-bold mb-6 text-sm border-b border-white/20 pb-2 inline-block">Contact Info</h4>
+            <ul className="space-y-4 text-[10px] tracking-tight">
               <li className="space-y-1">
                 <div className="text-brand-peach font-black">Founder</div>
                 <div className="font-bold text-white">Priyanshu Kumar</div>
@@ -88,7 +88,7 @@ export default function Footer() {
 
           {/* Map Section */}
           <div className="lg:col-span-1">
-            <h4 className="text-white font-bold mb-6 uppercase tracking-widest text-xs border-b border-white/20 pb-2 inline-block">Find Us</h4>
+            <h4 className="text-white font-bold mb-6 text-sm border-b border-white/20 pb-2 inline-block">Find Us</h4>
             <div className="rounded-2xl overflow-hidden hover:opacity-100 transition-all duration-700 h-40 shadow-inner border border-white/10">
               <iframe 
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d224345.83923508492!2d77.06889969131664!3d28.52721314115162!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cfd5b347eb62d%3A0x52c2b7494e204d!2sDelhi!5e0!3m2!1sen!2sin!4v1714000000000!5m2!1sen!2sin" 

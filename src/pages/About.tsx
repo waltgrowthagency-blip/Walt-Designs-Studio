@@ -1,5 +1,6 @@
 import { Eye, Target, Award, Users, ChevronDown, ChevronUp, Briefcase, Zap, Globe, Heart, TrendingUp } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
+import HiringBanner from '../components/HiringBanner';
 import { useState } from 'react';
 
 const FAQItem = ({ question, answer }: { question: string, answer: string }) => {
@@ -25,6 +26,7 @@ const FAQItem = ({ question, answer }: { question: string, answer: string }) => 
 export default function About() {
   return (
     <PageWrapper>
+      <HiringBanner />
       {/* Our Story Section */}
       <section className="py-20 bg-white overflow-hidden">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -44,7 +46,7 @@ export default function About() {
                    <Heart className="h-4 w-4 mr-2 fill-brand-purple" />
                    The Journey
                 </span>
-                <h1 className="text-4xl lg:text-5xl font-black text-brand-navy-violet leading-tight uppercase tracking-tighter">Our Story</h1>
+                <h1 className="text-4xl lg:text-5xl font-bold text-brand-navy-violet leading-tight tracking-tight">Our Story</h1>
                 <p className="text-xl text-brand-navy-violet/80 leading-relaxed font-bold italic border-l-4 border-brand-peach pl-6">
                   Founded in 2026, Walt Growth Agency emerged with a vision to redefine how brands and creators coexist. 
                 </p>
@@ -67,7 +69,7 @@ export default function About() {
         <div className="absolute top-0 right-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] -mr-48 -mt-48" />
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-4">
-            <h2 className="text-4xl md:text-6xl font-black uppercase tracking-tighter">How We Works</h2>
+            <h2 className="text-3xl md:text-5xl font-bold tracking-tight">How We Do It</h2>
             <p className="text-white/60 font-medium tracking-widest uppercase text-xs">Our Growth Process</p>
             <div className="h-1.5 w-24 bg-brand-peach mx-auto mt-4 rounded-full" />
           </div>
@@ -104,7 +106,7 @@ export default function About() {
           <div className="mt-20 p-12 bg-white rounded-[4rem] text-brand-navy-violet border-8 border-brand-peach/30 shadow-2xl max-w-5xl mx-auto">
             <div className="grid md:grid-cols-2 gap-12 items-center text-left">
               <div className="space-y-6">
-                <h4 className="text-3xl font-black uppercase tracking-tighter">Our Simple Approach</h4>
+                <h4 className="text-2xl font-bold tracking-tight">Our Simple Approach</h4>
                 <div className="space-y-4">
                   <div className="flex items-start space-x-4">
                     <div className="p-2 bg-green-100 rounded-lg text-green-600"><Zap className="h-5 w-5" /></div>
@@ -134,7 +136,7 @@ export default function About() {
       <section className="py-24 bg-gray-50">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16 space-y-4">
-            <h2 className="text-4xl font-black text-brand-navy-violet uppercase tracking-tighter">Frequently Asked Questions</h2>
+            <h2 className="text-3xl font-bold text-brand-navy-violet tracking-tight">Frequently Asked Questions</h2>
             <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">Everything you need to know</p>
           </div>
           

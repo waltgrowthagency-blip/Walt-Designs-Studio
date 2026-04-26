@@ -41,12 +41,17 @@ export default function AIPlanner() {
             exit={{ opacity: 0, scale: 0.8, x: 20 }}
             className="absolute bottom-16 right-0 w-[400px] max-w-[90vw] bg-white rounded-[2rem] shadow-2xl border-4 border-brand-navy-violet/10 overflow-hidden flex flex-col max-h-[70vh]"
           >
-            <div className="p-6 bg-brand-navy-violet text-white flex justify-between items-center shrink-0">
-              <div className="flex items-center space-x-2">
-                <Sparkles className="h-5 w-5 text-brand-peach" />
-                <h3 className="font-bold text-lg">Growth Planner AI</h3>
+            <div className="p-6 bg-gradient-to-r from-brand-navy-violet to-brand-purple text-white flex justify-between items-center shrink-0 border-b border-white/10">
+              <div className="flex items-center space-x-3">
+                <div className="p-2 bg-white/10 rounded-xl backdrop-blur-sm">
+                  <Sparkles className="h-6 w-6 text-brand-peach animate-pulse" />
+                </div>
+                <div>
+                  <h3 className="font-bold text-lg tracking-tight">Growth Planner AI</h3>
+                  <p className="text-[9px] text-brand-peach uppercase tracking-[0.15em] font-black">Elite Strategy</p>
+                </div>
               </div>
-              <button onClick={() => setIsOpen(false)} className="hover:rotate-90 transition-all">
+              <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-full transition-all">
                 <X className="h-6 w-6" />
               </button>
             </div>
@@ -132,22 +137,30 @@ export default function AIPlanner() {
       </AnimatePresence>
 
       <motion.button
-        whileHover={{ scale: 1.1, rotate: 5 }}
+        whileHover={{ scale: 1.1, rotate: -5 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-white text-brand-navy-violet border-4 border-brand-navy-violet rounded-full shadow-2xl flex items-center justify-center relative group"
+        className="w-16 h-16 bg-gradient-to-br from-brand-navy-violet to-brand-purple text-white rounded-[1.5rem] shadow-[0_20px_50px_rgba(48,0,48,0.3)] flex items-center justify-center relative group border-2 border-white/20 overflow-hidden"
       >
-        <span className="absolute -top-1 -right-1 flex h-4 w-4">
+        <div className="absolute inset-0 bg-gradient-to-tr from-brand-peach/20 via-transparent to-white/10 opacity-50" />
+        <span className="absolute -top-1 -right-1 flex h-4 w-4 z-10">
           <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-peach opacity-75"></span>
           <span className="relative inline-flex rounded-full h-4 w-4 bg-brand-peach"></span>
         </span>
-        {isOpen ? <X className="h-7 w-7" /> : <Sparkles className="h-7 w-7" />}
+        
+        {isOpen ? (
+          <X className="h-7 w-7 text-brand-peach relative z-10" />
+        ) : (
+          <div className="relative z-10">
+            <Sparkles className="h-7 w-7 text-brand-peach drop-shadow-[0_0_8px_rgba(255,180,120,0.5)]" />
+          </div>
+        )}
         
         {/* Tooltip */}
-        <div className="absolute right-20 bg-brand-navy-violet text-white px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+        <div className="absolute right-20 bg-brand-navy-violet text-white px-4 py-2 rounded-xl text-[10px] font-bold uppercase tracking-widest opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none shadow-xl border border-white/10">
           AI Growth Planner
         </div>
       </motion.button>
-    </div>
+</div>
   );
 }

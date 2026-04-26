@@ -25,7 +25,7 @@ export default function Growth() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
-              className="text-5xl lg:text-8xl font-black text-white leading-tight uppercase tracking-tighter"
+              className="text-4xl lg:text-7xl font-bold text-white leading-tight tracking-tight"
             >
               Scale Your Business <span className="text-brand-peach">Beyond Limits</span>
             </motion.h1>
@@ -45,7 +45,7 @@ export default function Growth() {
       <section className="py-24 bg-brand-purple">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20 space-y-4">
-            <h2 className="text-4xl lg:text-6xl font-bold text-white uppercase tracking-tighter">What We Do</h2>
+            <h2 className="text-3xl lg:text-5xl font-bold text-white tracking-tight">What We Do</h2>
             <p className="text-white/80 font-medium">The intersection of data, creativity, and explosive growth.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-12">
@@ -83,7 +83,7 @@ export default function Growth() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="order-2 lg:order-1 space-y-10">
-              <h2 className="text-4xl lg:text-6xl font-bold text-brand-navy-violet uppercase tracking-tighter">Our Strategic Approach</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold text-brand-navy-violet tracking-tight">Our Strategic Approach</h2>
               <div className="space-y-8">
                 {[
                   { title: 'Data Analysis', icon: BarChart3, text: 'We start with deep-dives into your current metrics and market position.' },
@@ -105,7 +105,7 @@ export default function Growth() {
             <div className="order-1 lg:order-2 relative">
               <div className="bg-brand-navy-violet rounded-[50px] p-8 lg:p-16 text-white space-y-8 shadow-2xl">
                  <div className="text-brand-peach font-bold uppercase tracking-widest text-sm">Real-Time Impact</div>
-                 <div className="text-5xl lg:text-9xl font-black tracking-tighter">+350%</div>
+                 <div className="text-5xl lg:text-8xl font-bold tracking-tight">+350%</div>
                  <div className="text-2xl font-medium opacity-80 leading-snug">Average growth seen by our full-agency clients in the first 12 months.</div>
                  <div className="flex items-center gap-4 pt-8 border-t border-white/10">
                     <div className="flex -space-x-2">
@@ -125,7 +125,7 @@ export default function Growth() {
           <div className="bg-brand-navy-violet rounded-[4rem] p-12 lg:p-24 relative overflow-hidden shadow-2xl">
              <div className="grid lg:grid-cols-2 gap-12 items-center relative z-10">
                 <div className="space-y-8">
-                   <h2 className="text-4xl lg:text-7xl font-bold text-white leading-tight uppercase tracking-tighter">Ready for Hyper-Growth?</h2>
+                   <h2 className="text-4xl lg:text-6xl font-bold text-white leading-tight tracking-tight">Ready for Hyper-Growth?</h2>
                    <p className="text-xl text-white/70 font-medium">Accepting only 3 new core agency clients this quarter. Apply for a growth audit today.</p>
                    <a href="/contact" className="inline-block px-12 py-6 bg-brand-peach text-brand-navy-violet font-bold rounded-2xl transition-all shadow-xl text-lg uppercase tracking-widest hover:bg-white">
                      Apply For Audit

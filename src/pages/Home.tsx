@@ -48,7 +48,7 @@ export default function Home() {
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: 0.2 }}
-                className="text-5xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tighter"
+                className="text-5xl lg:text-8xl font-bold text-white leading-[1.1] tracking-tight"
               >
                 We Design, Build & <span className="text-brand-peach italic">Grow</span> Your Brand
               </motion.h1>
@@ -141,7 +141,7 @@ export default function Home() {
       <section className="py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white uppercase tracking-tighter">Premium Solutions For Modern Brands</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold text-white tracking-tight">Premium Solutions For Modern Brands</h2>
             <p className="text-white/80 text-lg">We provide end-to-end digital services to help your business reach new heights in the digital landscape.</p>
           </div>
           <div className="grid md:grid-cols-3 gap-8">

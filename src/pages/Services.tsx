@@ -67,7 +67,7 @@ export default function Services() {
       <section className="bg-brand-purple py-20 lg:py-32">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-20 space-y-6">
-            <h1 className="text-4xl lg:text-7xl font-bold text-white tracking-tighter uppercase">Our Professional Services</h1>
+            <h1 className="text-4xl lg:text-6xl font-bold text-white tracking-tight">Our Professional Services</h1>
             <p className="text-xl text-white/80 font-medium">Empowering your business with high-quality creative and strategic solutions under one roof.</p>
           </div>
 
@@ -115,7 +115,7 @@ export default function Services() {
               <TrendingUp className="h-64 w-64" />
             </div>
             <div className="relative z-10 space-y-8">
-              <h2 className="text-3xl lg:text-5xl font-bold uppercase tracking-tighter">Ready to scale?</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold tracking-tight">Ready to scale?</h2>
               <p className="text-white/70 text-xl max-w-2xl mx-auto font-medium">Contact us today for a free consultation and let's discuss how we can help you grow.</p>
               <div className="flex justify-center">
                 <a href="/contact" className="px-10 py-5 bg-brand-peach text-brand-navy-violet font-bold rounded-2xl hover:bg-white transition-all shadow-lg text-lg">

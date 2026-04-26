@@ -53,12 +53,12 @@ export default function Navbar() {
               <a
                 key={link.name}
                 href={link.path}
-                className={`relative text-[10px] uppercase tracking-widest transition-all hover:text-brand-peach ${
+                className={`relative text-xs font-medium transition-all hover:text-brand-peach ${
                   window.location.pathname === link.path 
-                    ? 'text-brand-peach border-b-2 border-brand-peach pb-1 font-bold' 
+                    ? 'text-brand-peach border-b-2 border-brand-peach pb-1' 
                     : link.highlight
-                      ? 'text-brand-magenta font-black bg-brand-magenta/10 px-3 py-1 rounded-full animate-bounce shadow-sm'
-                      : 'text-white font-normal'
+                      ? 'text-brand-magenta bg-brand-magenta/10 px-3 py-1 rounded-full animate-bounce shadow-sm'
+                      : 'text-white'
                 }`}
               >
                 {link.name}
@@ -106,11 +106,11 @@ export default function Navbar() {
                   animate={{ x: 0, opacity: 1 }}
                   key={link.name}
                   href={link.path}
-                  className={`text-2xl font-normal uppercase tracking-tighter flex items-center justify-between ${
+                  className={`text-sm font-medium flex items-center justify-between transition-all ${
                     window.location.pathname === link.path 
-                      ? 'text-brand-peach font-bold' 
+                      ? 'text-brand-peach' 
                       : link.highlight 
-                        ? 'text-brand-peach bg-brand-peach/10 px-4 py-2 rounded-xl animate-pulse font-black' 
+                        ? 'text-brand-peach bg-brand-peach/10 px-4 py-2 rounded-xl animate-pulse' 
                         : 'text-white'
                   }`}
                   onClick={() => setIsOpen(false)}

@@ -135,7 +135,7 @@ export default function SpecialGuests() {
                 transition={{ duration: 5, repeat: Infinity }}
                 className="inline-block px-10 py-6 rounded-[3rem] shadow-[0_20px_80px_rgba(255,255,255,0.4)] mb-20 border-8 border-white transform-gpu hover:rotate-1 transition-transform cursor-default relative z-10"
               >
-                <h1 className="text-3xl md:text-6xl font-black text-white uppercase tracking-tighter drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]">
+                <h1 className="text-3xl md:text-5xl font-bold text-white tracking-tight drop-shadow-[0_5px_5px_rgba(0,0,0,0.5)]">
                   💚 Lime Green Specials 💚
                 </h1>
               </motion.div>
@@ -205,7 +205,7 @@ export default function SpecialGuests() {
               </div>
 
               <div className="mt-8 space-y-2">
-                <h2 className="text-4xl md:text-6xl font-black text-white uppercase tracking-tighter">
+                <h2 className="text-4xl md:text-5xl font-bold text-white tracking-tight">
                   Reyansh Singh
                 </h2>
                 <p className="text-brand-peach font-bold uppercase tracking-widest text-lg">
@@ -244,7 +244,7 @@ export default function SpecialGuests() {
               className="bg-white rounded-[3rem] p-8 md:p-12 shadow-2xl border-8 border-brand-peach/30"
             >
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-black text-brand-navy-violet uppercase tracking-tighter mb-2">Wish Him a Happy Birthday!</h3>
+                <h3 className="text-2xl font-bold text-brand-navy-violet tracking-tight mb-2">Wish Him a Happy Birthday!</h3>
                 <p className="text-gray-500 font-bold uppercase tracking-widest text-xs">Drop your blessings below</p>
               </div>
 

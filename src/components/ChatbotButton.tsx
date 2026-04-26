@@ -65,15 +65,15 @@ export default function ChatbotButton() {
                 <button onClick={() => setIsOpen(false)} className="p-2 hover:bg-white/10 rounded-xl transition-colors">
                   <ArrowLeft className="h-6 w-6" />
                 </button>
-                <div className="flex items-center space-x-3">
-                  <div className="w-10 h-10 bg-brand-peach rounded-full flex items-center justify-center">
-                    <Bot className="h-6 w-6 text-brand-navy-violet" />
+                <div className="flex items-center space-x-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-brand-peach to-orange-400 rounded-2xl flex items-center justify-center border-2 border-white/20 shadow-lg transform rotate-3">
+                    <Bot className="h-7 w-7 text-brand-navy-violet" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-sm">Walt AI Assistant</h3>
+                    <h3 className="font-bold text-base tracking-tight">Walt AI Assistant</h3>
                     <div className="flex items-center">
-                      <span className="w-2 h-2 bg-green-500 rounded-full animate-pulse mr-2"></span>
-                      <p className="text-[10px] text-brand-peach uppercase tracking-widest font-bold">Always Online</p>
+                      <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse mr-2 shadow-[0_0_8px_rgba(74,222,128,0.6)]"></span>
+                      <p className="text-[10px] text-brand-peach uppercase tracking-[0.1em] font-black">Elite Consultant</p>
                     </div>
                   </div>
                 </div>
@@ -159,9 +159,10 @@ export default function ChatbotButton() {
         whileHover={{ scale: 1.1, rotate: 5 }}
         whileTap={{ scale: 0.9 }}
         onClick={() => setIsOpen(!isOpen)}
-        className="w-16 h-16 bg-brand-navy-violet text-white rounded-2xl shadow-[0_20px_50px_rgba(48,0,48,0.3)] flex items-center justify-center relative group overflow-hidden"
+        className="w-16 h-16 bg-brand-navy-violet text-white rounded-2xl shadow-[0_20px_50px_rgba(48,0,48,0.4)] flex items-center justify-center relative group overflow-hidden border border-white/10"
       >
-        <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+        <div className="absolute inset-0 bg-gradient-to-tr from-brand-purple via-transparent to-brand-peach opacity-20" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-white/10 to-transparent translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
         <AnimatePresence mode="wait">
           {isOpen ? (
             <motion.div
@@ -170,7 +171,7 @@ export default function ChatbotButton() {
               animate={{ opacity: 1, rotate: 0 }}
               exit={{ opacity: 0, rotate: 90 }}
             >
-              <X className="h-8 w-8" />
+              <X className="h-8 w-8 text-brand-peach" />
             </motion.div>
           ) : (
             <motion.div
@@ -178,9 +179,12 @@ export default function ChatbotButton() {
               initial={{ opacity: 0, scale: 0.5 }}
               animate={{ opacity: 1, scale: 1 }}
               exit={{ opacity: 0, scale: 0.5 }}
-              className="flex flex-col items-center"
+              className="relative"
             >
-              <Bot className="h-8 w-8" />
+              <div className="absolute inset-0 bg-brand-peach blur-xl opacity-20 animate-pulse" />
+              <div className="relative p-3 bg-gradient-to-br from-brand-navy-violet to-brand-purple rounded-xl border border-white/20 shadow-inner">
+                <Bot className="h-8 w-8 text-brand-peach drop-shadow-[0_0_8px_rgba(255,180,120,0.5)]" />
+              </div>
             </motion.div>
           )}
         </AnimatePresence>

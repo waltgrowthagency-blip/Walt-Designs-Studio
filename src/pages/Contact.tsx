@@ -1,10 +1,12 @@
 import { Mail, Phone, MapPin, Send, MessageSquare } from 'lucide-react';
 import PageWrapper from '../components/PageWrapper';
 import BirthdayMarquee from '../components/BirthdayMarquee';
+import HiringBanner from '../components/HiringBanner';
 
 export default function Contact() {
   return (
     <PageWrapper>
+      <HiringBanner />
       <BirthdayMarquee />
       <section className="py-20 lg:py-32 bg-red-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -13,7 +15,7 @@ export default function Contact() {
             <div className="space-y-12">
               <div className="space-y-6">
                 <span className="text-brand-peach font-bold uppercase tracking-widest text-xs">Contact Us</span>
-                <h1 className="text-4xl lg:text-7xl font-bold text-white leading-tight tracking-tighter uppercase">Let's Build Something <span className="text-brand-peach italic">Legendary</span> Together</h1>
+                <h1 className="text-4xl lg:text-7xl font-bold text-white leading-tight tracking-tight">Let's Build Something <span className="text-brand-peach italic">Legendary</span> Together</h1>
                 <p className="text-xl text-white/80 leading-relaxed max-w-lg font-medium">
                   Whether you have a question about services, pricing, or anything else, our team is ready to answer all your questions.
                 </p>
@@ -71,7 +73,7 @@ export default function Contact() {
               </div>
               
               <div className="mb-8">
-                <h3 className="text-2xl font-black text-brand-navy-violet uppercase tracking-tighter">Enquiry Us</h3>
+                <h3 className="text-2xl font-bold text-brand-navy-violet tracking-tight">Enquiry Us</h3>
                 <p className="text-[10px] font-bold text-gray-400 uppercase tracking-widest mt-1">We'll get back to you within 24h</p>
               </div>
 
